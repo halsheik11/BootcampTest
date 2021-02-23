@@ -1,9 +1,8 @@
-
 Building configuration...
 
-Current configuration : 7000 bytes
+Current configuration : 6931 bytes
 !
-! Last configuration change at 12:52:34 UTC Tue Feb 23 2021 by developer
+! Last configuration change at 15:48:26 UTC Tue Feb 23 2021 by NETCONF
 !
 version 16.11
 service timestamps debug datetime msec
@@ -180,9 +179,9 @@ redundancy
 ! 
 !
 !
-interface Loopback10
+interface Loopback110
  description Pod Number 10
- ip address 10.111.10.1 255.255.255.255
+ ip address 10.111.10.2 255.255.255.255
 !
 interface GigabitEthernet1
  description MANAGEMENT INTERFACE - DON'T TOUCH ME
@@ -246,10 +245,7 @@ line vty 0 4
  login local
  transport input ssh
 !
-ntp server 10.11.10.65
-ntp server 10.12.10.65
-ntp server 10.13.10.65
-ntp server 10.14.10.65
+ntp server 10.111.10.66
 !
 !
 !
